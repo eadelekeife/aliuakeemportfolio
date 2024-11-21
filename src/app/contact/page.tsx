@@ -1,5 +1,4 @@
 import DisplayLayout from "@/components/layout";
-import Image from "next/image";
 
 import { LuArrowRight } from "react-icons/lu";
 

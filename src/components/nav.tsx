@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-import { FaArrowTrendUp } from "react-icons/fa6";
-
 type NavPropsType = {
     display?: string
 }
@@ -31,7 +29,7 @@ const Nav = (props: NavPropsType) => {
                 </div>
                 <div>
                     <a href="" className="flex gap-0">
-                        <div className="bg-transparent border-[#FFC107] border-2 border-solid text-accent py-5 px-8">Let's talk on WhatsApp</div>
+                        <div className="bg-transparent border-[#FFC107] border-2 border-solid text-accent py-5 px-8">Let&apos;s talk on WhatsApp</div>
                         {/* <div className="bg-white h-[4rem] -ml-2 w-[4rem] items-center flex justify-center text-xl rounded-full"><FaArrowTrendUp /></div> */}
                     </a>
                 </div>

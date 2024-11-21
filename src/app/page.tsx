@@ -1,10 +1,8 @@
 import DisplayLayout from "@/components/layout";
-import Image from "next/image";
 import React from "react";
 
 import { FaAngleDown } from "react-icons/fa6";
 
-import _1 from "@/app/_1.svg";
 
 export default function Home() {
   return (
