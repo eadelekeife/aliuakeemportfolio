@@ -10,7 +10,7 @@ type DisplayPropsInterface = {
 const DisplayLayout = (props: DisplayPropsInterface) => {
     return (
         <div>
-            <Nav display={props.display} />
+            <Nav />
             {props.children}
             <Footer />
         </div>

@@ -1,14 +1,15 @@
 import Link from "next/link";
 
-type NavPropsType = {
-    display?: string
-}
+// type NavPropsType = {
+//     display?: string
+// }
 
-const Nav = (props: NavPropsType) => {
+// const Nav = (props: NavPropsType) => {
+const Nav = () => {
     return (
         <div>
             <div className="flex justify-between items-center px-20 py-5">
-                <div>
+                <div >
                     <h4 className="text-white nav text-4xl">Aliu Akeem</h4>
                 </div>
                 <div>

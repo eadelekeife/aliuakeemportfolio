@@ -8,7 +8,7 @@ const Projects = () => {
                     <div>
                         <h3 className="font-bold text-6xl mb-5">Designing Success</h3>
                         <p className="text-xl w-[55%] leading-normal">
-                            See how we've turned ideas into reality. Dive into the
+                            See how we&apos;ve turned ideas into reality. Dive into the
                             designs that make a difference. Explore our <span className="text-[#969696]">journey and learn what sets us apart in crafting impactful digital experiences.</span>
                         </p>
                     </div>
