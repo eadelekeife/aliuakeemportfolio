@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+@font-face {
+  font-family: "Uncut Sans Bold";
+  src: url("/fonts/UncutSans-Bold.otf");
+}
+@font-face {
+  font-family: "Jelani";
+  src: url("/fonts/jelani.woff");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Work Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sora", sans-serif;
+  /* font-family: "Uncut Sans Bold"; */
+}
+
+.btn .icon-bar {
+  transform: rotate(-40deg);
+  transition: transform .5s ease-in-out;
+}
+
+.btn:hover .icon-bar {
+  transform: rotate(0deg);
+}
+
+.black-bg {
+  background: #080808;
+}
+
+.rotate {
+  transform: rotate(90deg);
+  height: 40rem;
+  width: auto;
+  width: 80%;
+  height: auto;
+}
+
+.nav {
+  font-family: "Jelani";
+}
