@@ -10,6 +10,7 @@ const AboutUs = () => {
                         <div className="flex flex-col md:grid grid-cols-2 gap-10 md:gap-20">
                             <div className="h-[20rem] md:h-full rounded-xl bg-[#929196]"></div>
                             <div>
+                                
                                 <p className="text-[#CCCFCA] text-sm md:text-sm mb-5">Hello there, my name is</p>
                                 <h2 className="text-3xl md:text-5xl font-black text-white leading-normal mb-5">Aliu Akeem <br /> <span className="text-4xl md:text-6xl">Oluwaseyi</span></h2>
                                 <h5 className="text-sm md:text-xl text-[#CCCFCA] font-bold mb-5 leading-loose md:leading-relaxed">
