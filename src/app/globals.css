@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
 @font-face {
   font-family: "Uncut Sans Bold";
   src: url("/fonts/UncutSans-Bold.otf");
 }
+
 @font-face {
   font-family: "Jelani";
   src: url("/fonts/jelani.woff");
@@ -75,4 +77,21 @@ h6 {
 
 .nav {
   font-family: "Jelani";
+}
+
+
+.ant-drawer-content-wrapper {
+  width: 100% !important;
+}
+
+.ant-drawer-header {
+  display: none !important;
+}
+
+.ant-drawer-body {
+  background: #080808;
+}
+
+.ant-drawer-body {
+  font-family: "Work Sans", sans-serif;
 }

@@ -1,45 +1,28 @@
 import DisplayLayout from "@/components/layout";
+import Link from "next/link";
 
 const AboutUs = () => {
     return (
         <div className="black-bg">
             <DisplayLayout>
                 <div className="about-hero min-h-[90vh] flex items-center justify-center">
-                    <div className="w-[85%] py-48">
-                        <h3 className="mx-auto text-7xl leading-tight uppercase font-black text-[#CCCFCA]">Hello there! My name is Aliu Akeem
-                            Oluwaseyi, a data analyst from Lagos Nigeria.</h3>
-                        <div className="mt-10 w-full h-[40rem] rounded-xl bg-[#CCCFCA]"></div>
-                        <div className="mt-32">
-                            <div className="grid grid-cols-1/2">
-                                <div>
-                                    <h5 className="text-[#CCCFCA] text-lg leading-loose">/My Bio</h5>
-                                </div>
-                                <div>
-                                    <p className="text-[#CCCFCA] text-lg leading-loose">Farzin Zaman Khan is a web designer and Webflow developer who uses whitespace to draw attention to his work
-                                        while creating a fun navigation experience (circles along a timeline unite as you scroll and hit the next
-                                        project) to keep visitors scrolling. Farzin opens the site with a bold Email me CTA button for those
-                                        who want to get in touch right away. And at the end, he places his contact information in a
-                                        striking, user-friendly heading with clever animations that make the experience more exciting.</p>
-                                </div>
-                            </div>
-                            <div className="mt-32">
-                                <div className="grid grid-cols-3 gap-20">
-                                    <div>
-                                        <h5 className="mb-3 text-lg text-[#CCCFCA]">Goal Oriented</h5>
-                                        <p className="text-[#CCCFCA] text-sm leading-loose">Farzin Zaman Khan is a web designer and Webflow developer who uses whitespace to draw attention to his work
-                                            while creating a fun navigation experience (circles along a timeline unite as you scroll and hit.</p>
-                                    </div>
-                                    <div>
-                                        <h5 className="mb-3 text-lg text-[#CCCFCA]">Goal Oriented</h5>
-                                        <p className="text-[#CCCFCA] text-sm leading-loose">Farzin Zaman Khan is a web designer and Webflow developer who uses whitespace to draw attention to his work
-                                            while creating a fun navigation experience (circles along a timeline unite as you scroll and hit.</p>
-                                    </div>
-                                    <div>
-                                        <h5 className="mb-3 text-lg text-[#CCCFCA]">Goal Oriented</h5>
-                                        <p className="text-[#CCCFCA] text-sm leading-loose">Farzin Zaman Khan is a web designer and Webflow developer who uses whitespace to draw attention to his work
-                                            while creating a fun navigation experience (circles along a timeline unite as you scroll and hit.</p>
-                                    </div>
-                                </div>
+                    <div className="px-5 md:px-20 pt-44 md:pt-60 pb-40">
+                        <div className="flex flex-col md:grid grid-cols-2 gap-10 md:gap-20">
+                            <div className="h-[20rem] md:h-full rounded-xl bg-[#929196]"></div>
+                            <div>
+                                <p className="text-[#CCCFCA] text-sm md:text-sm mb-5">Hello there, my name is</p>
+                                <h2 className="text-3xl md:text-5xl font-black text-white leading-normal mb-5">Aliu Akeem <br /> <span className="text-4xl md:text-6xl">Oluwaseyi</span></h2>
+                                <h5 className="text-sm md:text-xl text-[#CCCFCA] font-bold mb-5 leading-loose md:leading-relaxed">
+                                    A data analyst who transforms complex datasets into actionable strategies, delivering clarity and driving smarter decisions.
+                                </h5>
+                                <p className="text-[#CCCFCA] text-sm leading-loose mb-5">Aliu Akeem is a data analyst who turns raw data into meaningful 
+                                    insights, using visualization techniques that highlight trends and patterns. His work creates a seamless 
+                                    experience, blending clarity with actionable outcomes that keep stakeholders engaged and informed..</p>
+                                <p className="text-[#CCCFCA] text-sm leading-loose mb-5">Farzin Zaman Khan is a web designer and Webflow developer who uses whitespace to draw attention to his work
+                                    while creating a fun navigation experience (circles along a timeline unite as you scroll and hit the next
+                                    project) to keep visitors scrolling.</p>
+                                <p className="text-[#CCCFCA] text-sm leading-loose mb-10">If you have any exciting projects to talk about, feel free to hit me up.</p>
+                                <Link className="bg-accent text-black py-5 px-10 text-sm block rounded-lg w-max" href="/contact">Reach out to me</Link>
                             </div>
                         </div>
                     </div>

@@ -15,9 +15,9 @@ export default function Home() {
               <div className="w-[100%] md:mt-24">
                 <h5 className="mb-10 text-sm md:text-base text-[#FFC107]">Hi, my name is</h5>
                 <h2 className="text-white text-2xl md:text-6xl font-black mb-4 md:mb-8">Aliu Akeem Oluwaseyi</h2>
-                <h2 className="text-offWhite text-2xl md:text-6xl font-black mb-4 md:mb-8">I uncover insights from data.</h2>
+                <h2 className="text-offWhite text-2xl md:text-6xl font-black mb-4 md:mb-8">I analyze data for insights.</h2>
                 <div className="mt-3 mb-10">
-                  <p className="text-offWhite md:text-base text-sm w-full md:w-[65%] leading-loose">
+                  <p className="text-offWhite md:text-base text-sm w-full md:w-[60%] md:leading-loose leading-loose">
                     I&apos;m a data analyst passionate about turning numbers into insights that drive decisions. Currently, I&apos;m honing 
                     my skills and working on projects to build a solid foundation in data analysis.</p>
                 </div>
