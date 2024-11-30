@@ -11,13 +11,14 @@ export default function Home() {
                         <div>
                             <h4 className="mb-4 md:mb-10 text-offWhite">Contact Me</h4>
                             <h3 className="text-3xl md:text-6xl mb-4 md:mb-10 font-black text-white">Get in touch</h3>
-                            <p className="md:w-[80%] text-offWhite text-sm md:text-lg leading-loose md:leading-normal">Get in touch to learn more about our automation platform and how we
-                                can help you achieve your business goals. Get in touch to learn more about our automation platform.</p>
+                            <p className="md:w-[80%] text-offWhite text-sm md:text-lg leading-loose md:leading-normal">Get in touch to learn more 
+                                about how I can help you turn data into meaningful insights. Let&apos;s work together to unlock the potential 
+                                of your data and drive better decisions.</p>
                             <div className="mt-10 md:mt-16">
                                 <div className="md:w-[80%] flex justify-between items-center">
                                     <div>
                                         <h4 className="text-sm mb-5 text-[#666]">My Email Address</h4>
-                                        <h3 className="text-offWhite text-xl">hello@framer.com</h3>
+                                        <h3 className="text-offWhite text-xl">akeem.aliu24@gmail.com</h3>
                                     </div>
                                     <div>
                                         <span className="icon-bar"><LuArrowRight className="text-2xl text-offWhite" /></span>
@@ -26,7 +27,7 @@ export default function Home() {
                                 <div className="mt-10 md:mt-16 md:w-[80%] flex flex-col gap-6 md:gap-0 md:flex-row md:justify-between md:items-center">
                                     <div>
                                         <h4 className="text-sm mb-2 md:mb-5 text-[#666]">My Phone Number</h4>
-                                        <h3 className="text-offWhite text-xl"><span className="text-sm">(+234)</span> 813 227 7316</h3>
+                                        <h3 className="text-offWhite text-xl"><span className="text-sm">(+234)</span> 807 199 8237</h3>
                                     </div>
                                     <div>
                                         <h4 className="text-sm mb-2 md:mb-5 text-[#666]">Location</h4>

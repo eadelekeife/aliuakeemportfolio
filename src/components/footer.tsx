@@ -3,13 +3,27 @@ import { LuArrowRight } from "react-icons/lu";
 import { GoHeartFill } from "react-icons/go";
 
 const Footer = () => {
+    const onButtonClick = () => {
+        // using Java Script method to get PDF file
+        fetch('aliu_akeem.pdf').then(response => {
+            response.blob().then(blob => {
+                // Creating new object of PDF file
+                const fileURL = window.URL.createObjectURL(blob);
+                // Setting various property values
+                let alink = document.createElement('a');
+                alink.href = fileURL;
+                alink.download = 'aliu_akeem.pdf';
+                alink.click();
+            })
+        })
+    }
     return (
         <div className="bg-black py-20 px-5 md:px-20">
             <div className="flex flex-col md:flex-row justify-between gap-20">
                 <div>
                     <h4 className="mb-5 md:mb-10 text-base text-white">Reach out to me</h4>
                     <h3 className="text-white mb-5 md:mb-10 text-4xl md:text-6xl leading-snug">Let&apos;s create <br /> magic together</h3>
-                    <Link href="" className="bg-[#F0F0F0] text-black rounded-full py-4 md:py-5 px-6 md:px-8 text-base flex gap-2 items-center w-max btn">Talk to me
+                    <Link href="/contact" className="bg-[#F0F0F0] text-black rounded-full py-4 md:py-5 px-6 md:px-8 text-base flex gap-2 items-center w-max btn">Talk to me
                     <span className="icon-bar"><LuArrowRight className="text-2xl" /></span></Link>
                 </div>
                 <div>
@@ -48,7 +62,7 @@ const Footer = () => {
                         love <GoHeartFill className="text-[#FF0000]" /> by <a href="" className="border-b border-[#808080]" target="_blank">Adeleke Ifeoluwase</a></p>
                 </div>
                 <div>
-                    <Link href="" className="bg-[#F0F0F0] text-black rounded-xl py-5 px-8">Download My Resume</Link>
+                    <button onClick={onButtonClick} className="bg-[#F0F0F0] text-black rounded-xl py-5 px-8">Download My Resume</button>
                 </div>
             </div>
         </div>

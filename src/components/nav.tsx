@@ -70,7 +70,7 @@ const Nav = (props: NavPropsType) => {
                             <Link className="text-[#cccfca] text-2xl" href="/projects">My Projects</Link>
                         </li>
                         <li className="mb-10">
-                            <Link className="text-[#cccfca] text-2xl" href="/">Contact Me</Link>
+                            <Link className="text-[#cccfca] text-2xl" href="/contact">Contact Me</Link>
                         </li>
                     </ul>
                     <div className="absolute bottom-10 w-full">

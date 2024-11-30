@@ -1,9 +1,16 @@
 "use client";
 import DisplayLayout from "@/components/layout";
 import gsap from 'gsap';
+import Link from "next/link";
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import { FaAngleDown } from "react-icons/fa6";
+import Image from "next/image";
+
+import Screenshot1 from "@/assets/images/Data Professionals Survey.png";
+import Screenshot2 from "@/assets/images/Formula 1.png";
+import Screenshot3 from "@/assets/images/Insurance Policies.png";
+import Screenshot4 from "@/assets/images/NYC Bus Breakdowns.png";
 
 
 export default function Home() {
@@ -31,6 +38,21 @@ export default function Home() {
     }
   }, [currentcount]);
 
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    fetch('aliu_akeem.pdf').then(response => {
+      response.blob().then(blob => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = 'aliu_akeem.pdf';
+        alink.click();
+      })
+    })
+  }
+
   return (
     <div>
       <div className="animation-bg overflow-hidden" ref={blackHalf}>
@@ -55,7 +77,9 @@ export default function Home() {
                     I&apos;m a data analyst passionate about turning numbers into insights that drive decisions. Currently, I&apos;m honing
                     my skills and working on projects to build a solid foundation in data analysis.</p>
                 </div>
-                <button className="text-[#FFC107] border-solid border-2 border-[#FFC107] py-5 px-8 md:px-10">Download my Resume</button>
+                <button
+                  onClick={onButtonClick}
+                  className="text-[#FFC107] border-solid border-2 border-[#FFC107] py-5 px-8 md:px-10">Download my Resume</button>
               </div>
               <div>
                 {/* <Image src={_1} alt="ank" className="rotate" /> */}
@@ -80,7 +104,7 @@ export default function Home() {
                   </p>
 
                   <div className="mt-10 md:mt-20">
-                    <button className="bg-black text-base text-white rounded-full py-5 px-10">Read more about me</button>
+                    <Link href="/about" className="bg-black text-base text-white rounded-full py-5 px-10">Read more about me</Link>
                   </div>
                 </div>
               </div>
@@ -94,19 +118,31 @@ export default function Home() {
                   <h3 className="text-offWhite md:w-full w-[70%] leading-normal text-2xl md:text-3xl md:mb-0 mb-5">Some work I&apos;ve done over the past year</h3>
                 </div>
                 <div>
-                  <div className="h-[15rem] md:h-[25rem] w-full bg-offWhite rounded-lg md:mb-0 mb-5"></div>
+                  {/* <div className="h-[15rem] md:h-[25rem] w-full bg-offWhite rounded-lg md:mb-0 mb-5"></div> */}
+                  <div className="h-[15rem] md:h-[25rem] w-full bg-[#DCDFE6] rounded-xl flex items-center justify-center md:mb-0 mb-5">
+                    <Image src={Screenshot1} alt="project 1" className="w-[85%] h-auto" />
+                  </div>
                 </div>
                 <div>
-                  <div className="h-[15rem] md:h-[25rem] w-full bg-offWhite rounded-lg md:-mt-[20rem] md:mb-0 mb-5"></div>
+                  {/* <div className="h-[15rem] md:h-[25rem] w-full bg-offWhite rounded-lg md:-mt-[20rem] md:mb-0 mb-5"></div> */}
+                  <div className="h-[15rem] md:h-[25rem] w-full bg-[#DCDFE6] rounded-xl flex items-center justify-center md:-mt-[20rem] md:mb-0 mb-5">
+                    <Image src={Screenshot2} alt="project 1" className="w-[85%] h-auto" />
+                  </div>
                 </div>
                 <div>
-                  <div className="h-[15rem] md:h-[25rem] w-full bg-offWhite rounded-lg md:mb-0 mb-5"></div>
+                  {/* <div className="h-[15rem] md:h-[25rem] w-full bg-offWhite rounded-lg md:mb-0 mb-5"></div> */}
+                  <div className="h-[15rem] md:h-[25rem] w-full bg-[#DCDFE6] rounded-xl flex items-center justify-center md:mb-0 mb-5">
+                    <Image src={Screenshot3} alt="project 1" className="w-[85%] h-auto" />
+                  </div>
                 </div>
                 <div>
-                  <div className="h-[15rem] md:h-[25rem] w-full bg-offWhite rounded-lg md:-mt-[20rem] md:mb-0 mb-10"></div>
+                  {/* <div className="h-[15rem] md:h-[25rem] w-full bg-offWhite rounded-lg md:-mt-[20rem] md:mb-0 mb-10"></div> */}
+                  <div className="h-[15rem] md:h-[25rem] w-full bg-[#DCDFE6] rounded-xl flex items-center justify-center md:-mt-[20rem] md:mb-0 mb-10">
+                    <Image src={Screenshot4} alt="project 1" className="w-[85%] h-auto" />
+                  </div>
                 </div>
                 <div>
-                  <button className="bg-transparent border-solid rounded-xl border-2 border-offWhite text-offWhite text-base px-10 py-5">See More</button>
+                  <Link href="/contact" className="bg-transparent border-solid rounded-xl border-2 block w-max border-offWhite text-offWhite text-base px-10 py-5">See More</Link>
                 </div>
               </div>
               <div className="mt-32">
@@ -167,7 +203,7 @@ export default function Home() {
                 </div>
                 <div className="flex md:justify-end">
                   <div>
-                    <button className="bg-[#F0F0F0] text-black py-4 px-10 rounded-xl text-lg">Reach out to me</button>
+                    <Link href="/contact" className="bg-[#F0F0F0] block text-black py-5 px-10 rounded-xl text-lg">Reach out to me</Link>
                   </div>
                 </div>
               </div>
