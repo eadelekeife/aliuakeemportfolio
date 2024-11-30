@@ -7,6 +7,18 @@ import { FaAngleDown } from "react-icons/fa6";
 export default function Home() {
   return (
     <div>
+      <div className="animation-bg">
+        <div className="w-[35%] h-[60vh] mx-auto relative">
+          <div className="h-full rounded-3xl w-full bg-offWhite"></div>
+          <div className="absolute h-full items-center flex top-0">
+            <div>
+              <h3 className="text-8xl font-black text-accent mb-5">conversion</h3>
+              <h3 className="text-8xl font-black text-accent -ml-32 mb-5">through</h3>
+              <h3 className="text-8xl font-black text-accent ml-20">immersion</h3>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="black-bg">
         <DisplayLayout display="black">
           <div className="">
@@ -18,7 +30,7 @@ export default function Home() {
                 <h2 className="text-offWhite text-2xl md:text-6xl font-black mb-4 md:mb-8">I analyze data for insights.</h2>
                 <div className="mt-3 mb-10">
                   <p className="text-offWhite md:text-base text-sm w-full md:w-[60%] md:leading-loose leading-loose">
-                    I&apos;m a data analyst passionate about turning numbers into insights that drive decisions. Currently, I&apos;m honing 
+                    I&apos;m a data analyst passionate about turning numbers into insights that drive decisions. Currently, I&apos;m honing
                     my skills and working on projects to build a solid foundation in data analysis.</p>
                 </div>
                 <button className="text-[#FFC107] border-solid border-2 border-[#FFC107] py-5 px-8 md:px-10">Download my Resume</button>
