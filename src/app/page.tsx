@@ -30,6 +30,7 @@ export default function Home() {
       })
     }
   }, [currentcount]);
+  
   return (
     <div>
       <div className="animation-bg overflow-hidden" ref={blackHalf}>
