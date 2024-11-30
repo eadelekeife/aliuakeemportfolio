@@ -1,22 +1,43 @@
+"use client";
 import DisplayLayout from "@/components/layout";
-import React from "react";
+// import gsap from "gsap";
+import { gsap, TweenMax, Power3, Power0, Power1 } from 'gsap';
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import { FaAngleDown } from "react-icons/fa6";
 
 
 export default function Home() {
+  const [currentcount, setCurrentCount] = useState<number>(0);
+  useEffect(() => {
+    let count = currentcount;
+    let intervalWatch = setInterval(() => {
+      count = count + 20;
+      setCurrentCount(count);
+      if (count === 100) {
+        clearInterval(intervalWatch)
+      };
+    }, 1000)
+  }, [])
+  const blackHalf = useRef(null);
+  useLayoutEffect(() => {
+    if (currentcount === 100) {
+      TweenMax.to(blackHalf.current, {
+        height: 0,
+        ease: Power3.easeInOut,
+        duration: 4,
+        delay: 0,
+      })
+    }
+  }, [currentcount]);
   return (
     <div>
-      <div className="animation-bg">
-        <div className="w-[35%] h-[60vh] mx-auto relative">
-          <div className="h-full rounded-3xl w-full bg-offWhite"></div>
-          <div className="absolute h-full items-center flex top-0">
-            <div>
-              <h3 className="text-8xl font-black text-accent mb-5">conversion</h3>
-              <h3 className="text-8xl font-black text-accent -ml-32 mb-5">through</h3>
-              <h3 className="text-8xl font-black text-accent ml-20">immersion</h3>
-            </div>
-          </div>
+      <div className="animation-bg overflow-hidden" ref={blackHalf}>
+        <div className="flex items-end w-full px-2 pb-60 md:pb-20 h-[100vh] mx-auto relative">
+          <h3 className="md:text-5xl text-3xl text-[#FFC107] welcome-tag hidden md:block"
+            style={{ marginLeft: `${currentcount === 100 ? 90 : currentcount === 0 ? currentcount : currentcount - 5}%` }}>{currentcount}%</h3>
+          <h3 className="md:text-5xl text-3xl text-[#FFC107] welcome-tag md:hidden"
+            style={{ marginLeft: `${currentcount === 100 ? 80 : currentcount === 0 ? currentcount : currentcount - 10}%` }}>{currentcount}%</h3>
         </div>
       </div>
       <div className="black-bg">

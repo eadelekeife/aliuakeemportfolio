@@ -107,3 +107,7 @@ h6 {
   align-items: center;
   justify-items: center;
 }
+
+.welcome-tag {
+  transition: margin .5s ease-in-out;
+}
