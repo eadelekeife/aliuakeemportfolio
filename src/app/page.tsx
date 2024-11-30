@@ -10,7 +10,7 @@ export default function Home() {
   const [currentcount, setCurrentCount] = useState<number>(0);
   useEffect(() => {
     let count = currentcount;
-    let intervalWatch = setInterval(() => {
+    const intervalWatch = setInterval(() => {
       count = count + 20;
       setCurrentCount(count);
       if (count === 100) {
