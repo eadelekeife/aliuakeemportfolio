@@ -1,3 +1,5 @@
+"use client";
+
 import DisplayLayout from "@/components/layout";
 
 import { LuArrowRight } from "react-icons/lu";

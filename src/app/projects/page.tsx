@@ -1,3 +1,5 @@
+"use client";
+
 import DisplayLayout from "@/components/layout";
 import Image from "next/image";
 
