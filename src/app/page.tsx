@@ -1,7 +1,6 @@
 "use client";
 import DisplayLayout from "@/components/layout";
-// import gsap from "gsap";
-import { gsap, TweenMax, Power3, Power0, Power1 } from 'gsap';
+import gsap from 'gsap';
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import { FaAngleDown } from "react-icons/fa6";
@@ -22,15 +21,16 @@ export default function Home() {
   const blackHalf = useRef(null);
   useLayoutEffect(() => {
     if (currentcount === 100) {
-      TweenMax.to(blackHalf.current, {
+      gsap.to(blackHalf.current, {
         height: 0,
-        ease: Power3.easeInOut,
-        duration: 4,
-        delay: 0,
+        duration: 2,
+        delay: 1,
+        stagger: (index) => index * 0.1, // Creates a wave-like delay
+        ease: "power2.out"
       })
     }
   }, [currentcount]);
-  
+
   return (
     <div>
       <div className="animation-bg overflow-hidden" ref={blackHalf}>
