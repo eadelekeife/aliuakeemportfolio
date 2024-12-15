@@ -2,7 +2,7 @@
 
 import { Drawer } from "antd";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { FaTimes } from "react-icons/fa";
 
@@ -12,15 +12,28 @@ type NavPropsType = {
 
 const Nav = (props: NavPropsType) => {
 
+    const [fixedNav, setFixed] = useState(false);
     const [openMenuDrawer, setOpenMenuDrawer] = useState(false);
 
     const toggleMenuDrawerDisplay = () => {
         setOpenMenuDrawer(!openMenuDrawer);
     };
 
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            const offset = window.scrollY;
+            if (offset > 200) {
+                setFixed(true);
+            }
+            else {
+                setFixed(false);
+            }
+        })
+    }, [])
+
     return (
         <div>
-            <div className={`${props.position === "relative" ? "relative" : "fixed"} bg-black w-full flex justify-between items-center md:px-20 px-3 py-5`}>
+            <div className={`${fixedNav ? "fixed" : props.position === "relative" ? "relative" : "fixed"} bg-black w-full flex justify-between items-center md:px-20 px-3 py-5`}>
                 <div >
                     <Link href="/">
                         <h4 className={`text-white nav text-3xl`}>Aliu Akeem</h4>

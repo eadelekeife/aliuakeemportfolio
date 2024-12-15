@@ -142,7 +142,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <Link href="/contact" className="bg-transparent border-solid rounded-xl border-2 block w-max border-offWhite text-offWhite text-base px-10 py-5">See More</Link>
+                  <Link href="/projects" className="bg-transparent border-solid rounded-xl border-2 block w-max border-offWhite text-offWhite text-base px-10 py-5">See More</Link>
                 </div>
               </div>
               <div className="mt-32">
